@@ -1,7 +1,7 @@
 ---
 - name: Play testtttttttttttttttttttt
   hosts: centos
-    tasks:
+  tasks:
     - name: print var car
       commnad: echo "{{car}}"
 #      register: result
