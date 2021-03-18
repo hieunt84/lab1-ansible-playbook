@@ -1,12 +1,12 @@
 ---
-- name: Play 1
+- name: Print Laptop'information
   vars:
-    laptop: "T480s"
+    model: "T480s"
+    country_name: "USA"
   hosts: centos
   tasks:
-    - name: print var laptop
-      command:
-        cmd: echo "{{laptop}}r"
+    - name: print laptop'model
+      command: echo "My laptop'model is {{model}}"
       register: result
 
     - name: show result on screen 
