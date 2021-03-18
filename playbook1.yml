@@ -1,7 +1,7 @@
 #This is playbook
 ---
 #This is play1 in playbook 
-- 
+-
   name: Play 1  
   hosts: centos
   var:
