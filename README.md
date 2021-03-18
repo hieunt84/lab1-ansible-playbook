@@ -1,2 +1,2 @@
 # hello ansible
-# simple playbook
+# simple playbook with var and when
