@@ -3,7 +3,7 @@
   hosts: centos
   tasks:
     - name: print var car
-      commnad: echo "{{car}}"
+      ping:  
 #      register: result
 
 #    - name: show result on screen 
