@@ -1,7 +1,7 @@
 ---
 - name: Play 1
-#  var:
-#    laptop: "T480s"
+  vars:
+    laptop: "T480s"
   hosts: centos
   tasks:
     - name: print var car
