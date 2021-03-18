@@ -7,11 +7,10 @@
   tasks:
     - name: print laptop'model
       command: echo "My laptop'model is {{model}}"
-      register: result
 
     - name: print country_name
-      command: echo "i live {{model}}"
+      command: echo "i live {{country_name}}"
       register: result
 
-    - name: show result on screen 
+    - name: show result tasks on screen 
       debug: var=result.stdout_lines
