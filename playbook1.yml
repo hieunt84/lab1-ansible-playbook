@@ -1,0 +1,17 @@
+#This is playbook
+---
+#This is play1 in playbook 
+- 
+  name: Play 1  
+  hosts: centos
+  var:
+    car: "BMW"
+    laptop: "T480s"
+  tasks:
+    - 
+      name: print var car
+      commnad: echo "{{car}}"
+      register: result
+    - 
+      name: show result on screen 
+      debug: var=result.stdout_lines

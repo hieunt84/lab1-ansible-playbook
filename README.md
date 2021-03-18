@@ -1,1 +1,2 @@
-# lab1-ansible-playbook# hello devops
+# hello ansible
+# simple playbook
