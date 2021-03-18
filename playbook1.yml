@@ -1,10 +1,13 @@
 ---
-- name: Play testtttttttttttttttttttt
+- name: Play 1
+  var:
+    laptop: "T480s"
   hosts: centos
   tasks:
     - name: print var car
-      ping:  
-#      register: result
+      commnad:
+        cmd: echo "car"
+      register: result
 
-#    - name: show result on screen 
-#      debug: var=result.stdout_lines
+    - name: show result on screen 
+      debug: var=result.stdout_lines
