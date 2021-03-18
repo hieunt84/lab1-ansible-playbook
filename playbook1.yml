@@ -4,9 +4,9 @@
     laptop: "T480s"
   hosts: centos
   tasks:
-    - name: print var car
+    - name: print var laptop
       command:
-        cmd: echo "car"
+        cmd: echo "{{laptop}}r"
       register: result
 
     - name: show result on screen 
