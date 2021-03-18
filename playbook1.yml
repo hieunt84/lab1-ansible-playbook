@@ -9,5 +9,9 @@
       command: echo "My laptop'model is {{model}}"
       register: result
 
+    - name: print country_name
+      command: echo "i live {{model}}"
+      register: result
+
     - name: show result on screen 
       debug: var=result.stdout_lines
