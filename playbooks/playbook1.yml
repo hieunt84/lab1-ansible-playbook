@@ -1,17 +1,43 @@
 ---
-- name: Print Laptop'information
+#PLAY1: Simple play with vars
+- name: Play 1 :Print Laptop'information
   vars:
     model: "T480s"
     country_name: "USA"
   hosts: centos
   tasks:
-    - name: print laptop'model
+    - name: 1. task - print laptop'model
       command: echo "My laptop'model is {{model}}" 
 
-    - name: print country_name
+    - name: 2. task2 - print country_name
       command: echo "i live {{country_name}}"
-      when: country_name == "USA"
       register: result
 
     - name: show result tasks on screen 
       debug: var=result.stdout_lines
+#############################################################
+#PLAY2: Simple play with when
+-
+  name: Toi da tot nghiep chưa
+  hosts: centos
+  vars:
+    age: 25
+  tasks:
+    -
+      command: echo "Toi chua tot nghiep"
+      when: age < 22          
+    -                     
+      command: echo "Toi da tot nghiep"                     
+      when: age >= 22
+#############################################################
+# PLAY3: Simple play with loop with_items
+-
+  name: start services
+  hosts: centos
+  tasks:
+    - service: name={{ item }} state=started
+      with_items:
+        - httpd
+        - mariadb
+        
+
