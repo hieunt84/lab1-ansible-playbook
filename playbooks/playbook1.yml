@@ -1,0 +1,17 @@
+---
+- name: Print Laptop'information
+  vars:
+    model: "T480s"
+    country_name: "USA"
+  hosts: centos
+  tasks:
+    - name: print laptop'model
+      command: echo "My laptop'model is {{model}}" 
+
+    - name: print country_name
+      command: echo "i live {{country_name}}"
+      when: country_name == "USA"
+      register: result
+
+    - name: show result tasks on screen 
+      debug: var=result.stdout_lines
