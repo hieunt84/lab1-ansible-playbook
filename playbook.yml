@@ -1,6 +1,6 @@
 ---
 #PLAY1: Simple play with vars
-- name: Play 1 :Print Laptop'information
+- name: PLAY1 Simple play with vars
   vars:
     model: "T480s"
     country_name: "USA"
@@ -18,7 +18,7 @@
 #############################################################
 #PLAY2: Simple play with when
 -
-  name: Toi da tot nghiep chưa
+  name: PLAY2 Simple play with when
   hosts: centos
   vars:
     age: 25
@@ -32,10 +32,10 @@
 #############################################################
 # PLAY3: Simple play with loop with_items
 -
-  name: start services
+  name: PLAY3 Simple play with loop with_items
   hosts: centos
   tasks:
-    - service: name={{ item }} state=started
+    - service: name={{ item }} state=restarted
       with_items:
         - httpd
         - mariadb
