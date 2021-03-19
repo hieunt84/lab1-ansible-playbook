@@ -1,5 +1,5 @@
 ---
-#PLAY1: Simple play with vars
+#PLAY1: Simple play with vars and register
 - name: PLAY1 Simple play with vars
   vars:
     model: "T480s"
