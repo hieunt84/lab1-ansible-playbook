@@ -35,7 +35,9 @@
   name: PLAY3 Simple play with loop with_items
   hosts: centos
   tasks:
-    - service: name={{ item }} state=restarted
+    - service:
+        name: "{{ item }}"
+        state: restarted
       with_items:
         - httpd
         - mariadb
